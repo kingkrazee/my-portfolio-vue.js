@@ -8,7 +8,7 @@
   <div class="col-md-4">
     <div>
       <div class="landImg">
-    <img :src="landImgUrl" alt="mee" class="landImg"/>
+        <img :src="landImgUrl" alt="mee" class="landImg1"/>
   </div>
       
     </div>
@@ -40,7 +40,17 @@ export default {
   left: 38%;
   /* transform: translate(-50%, -50%); */
   animation: slide-in-right 1.5s forwards, rotate-3d 2s;
-  transform: perspective(500px) rotateY(0deg);
+  transform: perspective(600px) rotateY(0deg);
+}
+.landImg1{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5rem;
+  position: absolute;
+  top: 15%;
+  left: 38%;
+  box-shadow: -15px 7px 10px rgba(0, 0, 0, 0.3);
 }
 @keyframes slide-in-left {
   0% {
@@ -54,13 +64,13 @@ export default {
 }
 @keyframes rotate-3d {
   0% {
-    transform: perspective(500px) rotateY(0deg);
+    transform: perspective(600px) rotateY(0deg);
   }
   50% {
-    transform: perspective(500px) rotateY(-20deg);
+    transform: perspective(600px) rotateY(-20deg);
   }
   100% {
-    transform: perspective(500px) rotateY(0deg);
+    transform: perspective(600px) rotateY(0deg);
   }
 }
 
@@ -87,6 +97,9 @@ export default {
 }
 .row{
   width: 100%;
+}
+h1, h2 {
+  text-shadow: -10px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* MEDIA QUERIES */

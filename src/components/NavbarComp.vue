@@ -3,6 +3,7 @@
     <div class="container-fluid">
       <div class="mylogo">
        <img :src="mylogoUrl" alt="Kk" class="mylogo"/>
+       <h4>KingKrazee</h4>
       </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -65,10 +66,19 @@ export default {
 nav a{
   margin-left: 7px;
   margin-right: 7px;
-  text-decoration: none
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
 }
 .mylogo{
   height: 100px;
   width: 100px;
+  display: flex;
+  align-items: center;
+}
+.mylogo h4{
+  margin-right: 10px;
+}
+.mylogo h4{
+  margin: 0;
 }
 </style>
