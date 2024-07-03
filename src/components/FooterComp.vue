@@ -46,6 +46,7 @@
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     height: 3rem;
+    z-index: 1; /* Ensure the footer is on top of .project-container */
   }
   
   #feet {
@@ -53,7 +54,8 @@
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto; /* Centers the footer horizontally */
+    margin: 0 auto; 
+    z-index: 50;
   }
   
   .hub,
