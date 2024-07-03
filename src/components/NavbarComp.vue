@@ -59,6 +59,7 @@ export default {
   font-weight: 400;
   font-style: normal;
   font-size: 25px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
   nav a.router-link-exact-active {
   color: #f2ff00;
