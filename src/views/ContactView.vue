@@ -1,4 +1,5 @@
 <template>
+  <section id="hehe">
     <div class="row">
         <div class="col-md-4">
             <div class="theMap">
@@ -42,6 +43,7 @@
             </div>
         </div>
     </div>
+  </section>
   </template>
   
   <script>
@@ -90,6 +92,10 @@
   };
   </script>
 <style scoped>
+#hehe{
+  overflow-x: hidden;
+  height: 80vh;
+}
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
       
       .formcarry-container {
