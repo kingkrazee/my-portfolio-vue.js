@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div id="hehe" class="row">
   <div id="texty" class="col-md-6" style="border-right: 1px solid black;">
     <h2>Hii I am...</h2>
       <h1>Kayden Hendricks</h1>
@@ -30,6 +30,9 @@ export default {
 }
 </script>
 <style scoped>
+#hehe{
+  height: 77vh;
+}
 .landImg{
   width: 400px;
   height: 400px;
@@ -119,30 +122,38 @@ h1, h2 {
 }
 
 /* For screens 480px and below */
-@media only screen and (max-width: 480px) {
-  .landImg {
-    width: 200px;
-    height: 200px;
-    left: 30%;
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
   }
-  .texty {
-    width: 200px;
-    height: 200px;
-    font-size: 15px;
+
+  #texty {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .landImg {
+    position: static;
+    margin-top: 1rem;
+    transform: none;
+    width: 80%;
+    max-width: 400px;
+    height: auto;
   }
 }
 
-/* For screens 360px and below */
-@media only screen and (max-width: 360px) {
+@media (max-width: 480px) {
   .landImg {
-    width: 150px;
-    height: 150px;
-    left: 35%;
+    width: 100%;
+    max-width: 300px;
   }
-  .texty {
-    width: 150px;
-    height: 150px;
-    font-size: 12px;
+}
+
+@media (max-width: 360px) {
+  .landImg {
+    max-width: 250px;
   }
 }
 </style>

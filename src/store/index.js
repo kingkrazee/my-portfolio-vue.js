@@ -4,6 +4,7 @@ export default createStore({
   state: {
     aboutMe: null,
     projects: null,
+    skills: null,
   },
   getters: {
   },
@@ -13,7 +14,10 @@ export default createStore({
   },
   setProjects(state, info) {
     state.projects = info
-}
+},
+  setSkills(state, info){
+    state.skills = info
+  }
 },
 actions: {
   async getAboutMe(context){
@@ -29,8 +33,15 @@ actions: {
     console.log(project); 
     let {projects} = project
     context.commit('setProjects',projects)
-}
-  },
+},
+ async getSkills(context){
+  let skillData = await fetch('https://kingkrazee.github.io/first-api/data/data.json');
+  let skill = await skillData.json();
+  console.log(skill);
+  let {skills} = skill
+  context.commit('setSkills',skills)
+  }
+},
   modules: {
   }
 })

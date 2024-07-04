@@ -1,6 +1,6 @@
 <template>
-  <div class="row">
-    <div class="col">
+  <div id="hehe">
+    <div>
       <div id="oor">
     <h1>About Me</h1>
     <div class="oor">
@@ -8,7 +8,7 @@
     </div>
   </div>
     </div>
-    <div class="col">
+    <div>
       <div class="aboutImg">
        <img  :src="aboutImgUrl" alt="mee" class="aboutImg1"/>
       </div>
@@ -34,6 +34,13 @@ data(){
 }
 </script>
 <style scoped>
+#hehe{
+  height: 80vh;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  padding-top: 2rem;
+}
   #oor {
   display: flex;
   flex-direction: column;

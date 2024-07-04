@@ -37,11 +37,13 @@
   
   <style>
   footer {
-    background-color: transparent;
+    background: rgb(228,0,0);
+background: linear-gradient(286deg, rgba(228,0,0,1) 15%, rgba(255,255,0,1) 100%);
+background-repeat: no-repeat;
     padding: 10px;
     text-align: center;
     color: #000000;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);

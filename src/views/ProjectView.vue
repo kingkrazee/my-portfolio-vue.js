@@ -1,5 +1,9 @@
 <template lang="">
-    <div class="project-container">
+  <section class="hehe">
+    <div class="title">
+      <h1>Projects</h1>
+    </div>
+    <div class="project-container" id="project-container">
         <div v-for="project in getProjInfo()" :key="project" class="project">
             <div class="card">
                 <div class="projImg">
@@ -16,6 +20,7 @@
            </div>
         </div>
     </div>
+  </section>
 </template>
 <script>
 export default {
@@ -37,16 +42,31 @@ export default {
 }
 </script>
 <style scoped>
+.title{
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  font-family: "Kranky", serif;
+}
+h1{
+  font-size: 45px;
+}
+.hehe{
+  background: rgb(228,0,0);
+  background: linear-gradient(286deg, rgba(228,0,0,1) 15%, rgba(255,255,0,1) 100%);
+  background-repeat: no-repeat;
+  height: 120vh;
+}
 .project-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  margin-top: 2rem;
   margin-left: 8rem;
   position: relative;
   z-index: 0;
   max-height: calc(100vh - 6rem);
 }
+
 
 .project {
   margin: 0;
