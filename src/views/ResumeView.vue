@@ -1,8 +1,5 @@
 <template>
     <section class="hehe">
-        <div class="title">
-            <h1>Resume</h1>
-        </div>
         <div class="timeline-container">
           <div class="education-timeline">
           <div class="timeline-item" v-for="education in getEduInfo()" :key="education">

@@ -5,7 +5,7 @@
       <h1>Kayden Hendricks</h1>
       <h2>I am an aspiring web developer</h2>
   </div>
-  <div class="col-md-4">
+  <div id="imgy" class="col-md-4">
     <div>
       <div class="landImg">
         <img :src="landImgUrl" alt="mee" class="landImg1"/>
@@ -114,26 +114,17 @@ h1, h2 {
     height: 300px;
     left: 25%;
   }
-  .texty {
+
+  #texty {
     width: 300px;
-    height: 300px;
     font-size: 20px;
+    margin-left: 0;
+    margin-top: 1rem;
   }
 }
 
 /* For screens 480px and below */
-@media (max-width: 768px) {
-  .row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #texty {
-    margin-left: 0;
-    text-align: center;
-    margin-top: 1rem;
-  }
-
+@media (max-width: 480px) {
   .landImg {
     position: static;
     margin-top: 1rem;
@@ -141,19 +132,33 @@ h1, h2 {
     width: 80%;
     max-width: 400px;
     height: auto;
+    left: 10%;
   }
-}
 
-@media (max-width: 480px) {
-  .landImg {
-    width: 100%;
-    max-width: 300px;
+  .texty {
+    text-align: center;
   }
 }
 
 @media (max-width: 360px) {
   .landImg {
-    max-width: 250px;
+    width: 200px;
+    height: 200px;
+  }
+  .landImg1{
+    width: 200px;
+    height: 200px;
+  }
+  #texty{
+    height: 200px;
+    width: 200px;
+    border-right: none !important;
+    margin-left: 5rem;
+  }
+  #imgy{
+    position: absolute;
+    top: 40%;
+    left: -12%;
   }
 }
 </style>

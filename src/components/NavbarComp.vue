@@ -1,15 +1,15 @@
 <template>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="mylogo">
        <img :src="mylogoUrl" alt="Kk" class="mylogo"/>
        <h4>KingKrazee</h4>
       </div>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <router-link to="/">Home</router-link>
           </li>
@@ -83,5 +83,49 @@ nav a{
 .mylogo h4{
   margin: 0;
 }
+/* MEDIA QUERIES */
 
+/* For screens 768px and below */
+@media only screen and (max-width: 768px) {
+  .mylogo{
+    width: 300px;
+    height: 300px;
+    left: 25%;
+  }
+
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+  .mylogo {
+    width: 250px;
+
+  }
+
+}
+
+@media (max-width: 360px) {
+  .mylogo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    /* position: absolute;
+    right: 10%; */
+  }
+  h4{
+    font-size: 10px;
+    margin: 10px;
+  }
+  .navbar-toggler{
+    margin-right: 10px;
+  }
+  .container-fluid{
+    width: 250px;
+  }
+  .navbar-collapse{
+    font-size: 20px;
+  }
+}
 </style>

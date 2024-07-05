@@ -7,6 +7,7 @@ export default createStore({
     skills: null,
     education: null,
     work: null,
+    testimonials: null,
   },
   mutations: {
     setAboutMe(state, info) {
@@ -23,6 +24,9 @@ export default createStore({
   },
   setWork(state, info) {
     state.work = info
+  },
+  setTestimonials(state, info) {
+    state.testimonials = info
   }
 },
 actions: {
@@ -60,6 +64,13 @@ actions: {
     console.log(work);
     let {workExp} = work
     context.commit('setWork', workExp)
+  },
+  async getTestimonials(context){
+    let testimonialsData = await fetch('https://kingkrazee.github.io/first-api/data/data.json');
+    let testimonial = await testimonialsData.json();
+    console.log(testimonial.testimonials);
+    let {testimonials} = testimonial
+    context.commit('setTestimonials', testimonials)
   }
 },
 })

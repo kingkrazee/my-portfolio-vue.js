@@ -9,7 +9,7 @@
               </a>
             </div>
           </div>
-          <div class="col-4">
+          <div id="year" class="col-4">
             &copy; {{ new Date().getFullYear() }} Kayden Hendricks
           </div>
           <div class="col-4">
@@ -72,5 +72,24 @@ background-repeat: no-repeat;
     max-width: 40px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
   }
+  @media only screen and (max-width: 768px) {
+  
+}
+
+/* For screens 480px and below */
+@media (max-width: 480px) {
+ 
+
+}
+
+@media (max-width: 360px) {
+  #feet{
+    display: flex;
+    justify-content: space-between;
+  }
+  #year{
+    font-size: 10px;
+  }
+}
   </style>
   
