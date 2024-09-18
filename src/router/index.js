@@ -2,9 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ProjectView from '../views/ProjectView.vue'
-import SkillsView from '../views/SkillsView.vue'
-import ResumeView from '../views/ResumeView.vue'
-import TestimonialsView from '../views/TestimonialsView.vue'
+import EdExpView from '../views/Education&ExperienceView.vue'
 import ContactView from '../views/ContactView.vue'
 
 
@@ -25,19 +23,9 @@ const routes = [
     component: ProjectView
   },
   {
-    path: '/skills',
-    name: 'skills',
-    component: SkillsView
-  },
-  {
-    path: '/resume',
-    name: 'resume',
-    component: ResumeView
-  },
-  {
-    path: '/testimonials',
-    name: 'testimonials',
-    component: TestimonialsView
+    path: '/edexp',
+    name: 'edexp',
+    component: EdExpView
   },
   {
     path: '/contact',

@@ -13,8 +13,7 @@
       
     </div>
   </div>
-</div>
- 
+</div> 
 </template>
 
 <script>
@@ -24,7 +23,7 @@
 export default {
   data(){
     return{
-      landImgUrl: 'https://kingkrazee.github.io/eccomerce/images/id.jpg'
+      landImgUrl: 'https://github.com/kingkrazee/capstone-hosted/blob/main/porfolio.jpg?raw=true'
     }
   }
 }
@@ -51,8 +50,7 @@ export default {
   object-fit: cover;
   border-radius: 5rem;
   position: absolute;
-  top: 15%;
-  left: 38%;
+  left: 45%;
   box-shadow: -15px 7px 10px rgba(0, 0, 0, 0.3);
 }
 @keyframes slide-in-left {

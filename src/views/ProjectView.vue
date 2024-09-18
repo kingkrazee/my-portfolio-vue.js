@@ -51,12 +51,6 @@ export default {
 h1{
   font-size: 45px;
 }
-.hehe{
-  background: rgb(228,0,0);
-  background: linear-gradient(286deg, rgba(228,0,0,1) 15%, rgba(255,255,0,1) 100%);
-  background-repeat: no-repeat;
-  height: 120vh;
-}
 .project-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -65,6 +59,7 @@ h1{
   position: relative;
   z-index: 0;
   max-height: calc(100vh - 6rem);
+  margin-bottom: 5rem;
 }
 
 

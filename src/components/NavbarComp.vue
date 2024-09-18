@@ -20,13 +20,7 @@
             <router-link to="/project">Projects</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/skills">Skills</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/resume">Resume</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/testimonials">Testimonials</router-link>
+            <router-link to="/edexp">Education & Experience</router-link>
           </li>
           <li class="nav-item dropdown">
             <router-link to="/contact">Contact</router-link>
@@ -70,6 +64,7 @@ nav a{
   margin-right: 7px;
   text-decoration: none;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+  color: black;
 }
 .mylogo{
   height: 100px;
