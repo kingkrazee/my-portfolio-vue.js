@@ -74,7 +74,7 @@ export default {
   object-fit: cover;
   border-radius: 5rem;
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 38%;
   /* transform: translate(-50%, -50%); */
   animation: slide-in-right 1.5s forwards, rotate-3d 2s;

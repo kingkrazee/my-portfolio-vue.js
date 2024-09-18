@@ -281,7 +281,7 @@
         height:280px;
         width:280px;
         position: absolute;
-        top: 26%;
+        top: 40%;
         left: -1%;
     }
     .thePin {
