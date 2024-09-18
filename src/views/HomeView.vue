@@ -1,29 +1,65 @@
 <template>
   <div id="hehe" class="row">
-  <div id="texty" class="col-md-6" style="border-right: 1px solid black;">
-    <h2>Hii I am...</h2>
+    <div id="texty" class="col-md-6" style="border-right: 1px solid black;">
+      <h2>Hii I am...</h2>
       <h1>Kayden Hendricks</h1>
-      <h2>I am an aspiring web developer</h2>
-  </div>
-  <div id="imgy" class="col-md-4">
-    <div>
-      <div class="landImg">
-        <img :src="landImgUrl" alt="mee" class="landImg1"/>
-  </div>
-      
+      <h2>I am an aspiring <span>{{ typedProfession }}</span></h2>
+    </div>
+    <div id="imgy" class="col-md-4">
+      <div>
+        <div class="landImg">
+          <img :src="landImgUrl" alt="mee" class="landImg1"/>
+        </div>
+      </div>
     </div>
   </div>
-</div> 
 </template>
 
 <script>
-// @ is an alias to /src
-
-
 export default {
-  data(){
-    return{
-      landImgUrl: 'https://github.com/kingkrazee/capstone-hosted/blob/main/porfolio.jpg?raw=true'
+  data() {
+    return {
+      landImgUrl: 'https://github.com/kingkrazee/capstone-hosted/blob/main/porfolio.jpg?raw=true',
+      professions: ['web developer', 'software engineer', 'full-stack developer', 'UI/UX designer'],
+      currentProfessionIndex: 0,
+      typedProfession: '',
+      typingSpeed: 50 // adjust the speed to your liking
+    }
+  },
+  mounted() {
+    this.typeProfession()
+  },
+  methods: {
+    typeProfession() {
+      const profession = this.professions[this.currentProfessionIndex]
+      let charIndex = 0
+
+      const typeInterval = setInterval(() => {
+        if (charIndex < profession.length) {
+          this.typedProfession += profession[charIndex]
+          charIndex++
+        } else {
+          clearInterval(typeInterval)
+          setTimeout(() => {
+            this.deleteProfession()
+          }, 2000) // wait 2 seconds before deleting
+        }
+      }, this.typingSpeed)
+    },
+    deleteProfession() {
+      let charIndex = this.typedProfession.length
+
+      const deleteInterval = setInterval(() => {
+        if (charIndex > 0) {
+          this.typedProfession = this.typedProfession.substring(0, charIndex - 1)
+          charIndex--
+        } else {
+          clearInterval(deleteInterval)
+          this.currentProfessionIndex = (this.currentProfessionIndex + 1) % this.professions.length
+          this.typedProfession = ''
+          this.typeProfession()
+        }
+      }, this.typingSpeed)
     }
   }
 }
